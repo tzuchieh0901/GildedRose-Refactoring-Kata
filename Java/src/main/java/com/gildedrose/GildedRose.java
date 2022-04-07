@@ -9,8 +9,11 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (item.name.equals("Aged Brie")
-                || item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+            if (item.name.equals("Aged Brie")) {
+                if (item.quality < 50) {
+                    item.quality = item.quality + 1;
+                }
+            } else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                 if (item.quality < 50) {
                     item.quality = item.quality + 1;
 
